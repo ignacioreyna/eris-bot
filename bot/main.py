@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 import random
 
-import buttons, keep_alive
+import buttons
 
 
 load_dotenv()
