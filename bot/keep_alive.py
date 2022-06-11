@@ -1,10 +1,8 @@
 import requests
-import schedule
+import threading
 
 def rcp():
+    threading.Timer(10, rcp).start()
     requests.get('https://eris-modo-bot.herokuapp.com/')
 
-schedule.every(10).minutes.do(rcp)
-
-while True:
-    schedule.run_pending()
+rcp()
